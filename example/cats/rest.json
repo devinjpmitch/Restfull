@@ -1,0 +1,6 @@
+{
+  "namespace": "cats",
+  "version": "1",
+  "route": "(?P<catname>[a-zA-Z0-9-]+)",
+  "method": "post"
+}
