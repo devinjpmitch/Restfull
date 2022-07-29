@@ -8,7 +8,6 @@
  * @since 		1.0.1
  * @package		MBC
  *
- * @better-rest
  * Plugin Name:	   	Restfull
  * Plugin URI:		https://github.com/mitchell-b-chelin/Restfull/blob/main/LICENSE
  * Description:	   	A developer friendly Rest API registering .
