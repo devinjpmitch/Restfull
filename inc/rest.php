@@ -65,8 +65,9 @@ class Restfull {
                 $route = $rest['route'][0] == '/' ? $rest['route'] : '/'.$rest['route'];
                 // validation variable
                 $validate = false;
+                if(file_exists($dir . '/validate.php')) $validate = true;
                 // if validation file exists then set validate to validation function
-                if(file_exists($dir . '/validate.php')) $validate = include $dir . '/validate.php';
+               
                 /**
                  * setup register rest route
                  * @param $namespace, $route, Array
@@ -89,7 +90,7 @@ class Restfull {
                         ));
                     },
                     // Validation
-                    'args' => $validate,
+                    'args' =>  $validate ? include $dir.'/validate.php' : array(),
                     // Perminssions callback
                     'permission_callback' => function() use($dir, $rest) {
                         // if permissions file exists then include it
