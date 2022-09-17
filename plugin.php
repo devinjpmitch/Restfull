@@ -11,7 +11,7 @@
  * Plugin Name:	   	Restfull
  * Plugin URI:		https://github.com/mitchell-b-chelin/Restfull/blob/main/LICENSE
  * Description:	   	A developer friendly Rest API registering .
- * Version:		   	1.0.2
+ * Version:		   	1.0.3
  * Author:			Mitchell-Blair Chelin
  * Author URI:		https://github.com/mitchell-b-chelin/
  * License:		   	MIT

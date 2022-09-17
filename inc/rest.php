@@ -79,6 +79,7 @@ class Restfull {
                     'callback' => function(\WP_REST_Request $req) use($dir, $rest){
                         //get post parameters as varible
                         $params = $req->get_url_params();
+                        if($_POST) $params = array_merge($params, $_POST);
                         //if callback file exists then include it
                         if(file_exists($dir.'/callback.php')) include $dir.'/callback.php';
                         // if else then return a friendly error
