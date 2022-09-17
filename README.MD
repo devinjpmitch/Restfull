@@ -116,6 +116,7 @@ The ```permission.php``` is not a required file but is used for setting permissi
  * Restfull Permission
  * This is used to define the permissions for the Restfull
  * Note: none of these comments is required
+ * @return boolean
  */
 
 // is user logged in

@@ -40,5 +40,5 @@ if (!empty($posts)) {
         return wp_send_json_error('Cat not found');
     } 
     // Respond with JSON
-    wp_send_json($meta);
+    wp_send_json($cats);
 }
