@@ -52,6 +52,10 @@ class Restfull {
         );
         // add wordpress api init action using e variable
         add_action( 'rest_api_init', function () use($e) {
+            $user = array(
+                'logged_in' => is_user_logged_in(),
+                'user_id' => get_current_user_id()
+            );
             // seperating variables
             $rest = $e['rest'];
             $dir = $e['dir'];
@@ -93,7 +97,7 @@ class Restfull {
                     // Validation
                     'args' =>  $validate ? include $dir.'/validate.php' : array(),
                     // Perminssions callback
-                    'permission_callback' => function() use($dir, $rest) {
+                    'permission_callback' => function() use($dir, $rest,$user) {
                         // if permissions file exists then include it
                         if(file_exists($dir.'/permission.php')) return include $dir.'/permission.php';
                         // allow all
