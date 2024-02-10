@@ -80,7 +80,7 @@ class Restfull {
                     // Rest Method
                     'methods' => $rest['method'],
                     // Callback expose Request from WP Rest request using Directory And Rest Array
-                    'callback' => function(\WP_REST_Request $req) use($dir, $rest, user){
+                    'callback' => function(\WP_REST_Request $req) use($dir, $rest, $user){
                         //get post parameters as varible
                         $params = $req->get_url_params();
                         if($_POST) $params = array_merge($params, $_POST);
